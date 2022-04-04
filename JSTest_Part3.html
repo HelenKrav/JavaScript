@@ -6,7 +6,7 @@
 
 
 <script type="text/javascript">
-
+'use strict';
 // function showMessage()
 // {
 //     alert("hello");
@@ -79,23 +79,44 @@ function checkAge1(age) {
 
 // P.S. В этой задаче функция обязана поддерживать только натуральные значения n, т.е. целые от 1 и выше.
 
-function pow(x,n)
-{
-    if (n<1)
-    {
-        return alert("n<1");
-    }
-    else 
-    {
-        return x**n;
-    }
+// function pow(x,n)
+// {
+//     if (n<1)
+//     {
+//         return alert("n<1");
+//     }
+//     else 
+//     {
+//         return x**n;
+//     }
 
-}
+// }
 
-let x = +prompt("Enter x:", "5");
-let n = +prompt("Enter n:",  "2");
+// let x = +prompt("Enter x:", "5");
+// let n = +prompt("Enter n:",  "2");
 
-alert(pow(x,n));
+// alert(pow(x,n));
+
+
+//task 4
+// Замените код Function Expression стрелочной функцией:
+
+// function ask(question, yes, no) {
+//   if (confirm(question)) yes()
+//   else no();
+// }
+
+// ask(
+//   "Вы согласны?",
+//   function() { alert("Вы согласились."); },
+//   function() { alert("Вы отменили выполнение."); }
+// );
+
+let ask = confirm("Вы согласны?") ? () => alert("Вы согласились.") : ()=> alert("Вы отменили выполнение.");
+
+ask();
+
+
 
 </script> 
 
