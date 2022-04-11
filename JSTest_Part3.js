@@ -1,22 +1,5 @@
-<!DOCTYPE html>
-<html>
-
-<body>
-<p> before script </p>
-
-
-<script type="text/javascript">
-'use strict';
-// function showMessage()
-// {
-//     alert("hello");
-// }
-
-// showMessage();
-
 //task 1
 // Следующая функция возвращает true, если параметр age больше 18.
-
 // В ином случае она задаёт вопрос confirm и возвращает его результат.
 
 // function checkAge(age) {
@@ -33,14 +16,15 @@
 // 1)Используя оператор ?
 // 2)Используя оператор ||
 
+{
 function checkAge(age) {
-  return  (age>18) ? true :  confirm('Родители разрешили?');
+    return (age > 18) ? true : confirm('Родители разрешили?');
 }
 
 function checkAge1(age) {
-  return  (age>18) || confirm('Родители разрешили?');
+    return (age > 18) || confirm('Родители разрешили?');
 }
-
+}
 
 
 //task 2 
@@ -51,20 +35,21 @@ function checkAge1(age) {
 // min(2, 5) == 2
 // min(3, -1) == -1
 // min(1, 1) == 1
+{
+ function min(a,b)
+ {
+     if(a<b)
+     {
+         return a;
+    }
+    else 
+    {
+        return b;
+    }
+ }
 
-//  function min(a,b)
-//  {
-//      if(a<b)
-//      {
-//          return a;
-//     }
-//     else 
-//     {
-//         return b;
-//     }
-//  }
-
-//  alert(min(29,5));
+ alert(min(29,5));
+}
 
 
 
@@ -78,24 +63,25 @@ function checkAge1(age) {
 // Создайте страницу, которая запрашивает x и n, а затем выводит результат pow(x,n).
 
 // P.S. В этой задаче функция обязана поддерживать только натуральные значения n, т.е. целые от 1 и выше.
+{
+function pow(x,n)
+{
+    if (n<1)
+    {
+        return alert("n<1");
+    }
+    else 
+    {
+        return x**n;
+    }
 
-// function pow(x,n)
-// {
-//     if (n<1)
-//     {
-//         return alert("n<1");
-//     }
-//     else 
-//     {
-//         return x**n;
-//     }
+}
 
-// }
+let x = +prompt("Enter x:", "5");
+let n = +prompt("Enter n:",  "2");
 
-// let x = +prompt("Enter x:", "5");
-// let n = +prompt("Enter n:",  "2");
-
-// alert(pow(x,n));
+alert(pow(x,n));
+}
 
 
 //task 4
@@ -112,18 +98,6 @@ function checkAge1(age) {
 //   function() { alert("Вы отменили выполнение."); }
 // );
 
-let ask = confirm("Вы согласны?") ? () => alert("Вы согласились.") : ()=> alert("Вы отменили выполнение.");
+let ask = confirm("Вы согласны?") ? () => alert("Вы согласились.") : () => alert("Вы отменили выполнение.");
 
 ask();
-
-
-
-</script> 
-
-
-<p>after script</p>
-
-
-</body>
-
-</html>
